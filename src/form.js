@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 
+
 const Form = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -48,10 +49,11 @@ const Form = () => {
 
 
     return(
-        <div>
+        <div className="container">
             <form onSubmit={handleSumit}>
                 <div>
                     <label>Email:</label>
+                    <br></br>
                     <input type="email" 
                     value={email} 
                     onChange={handleEmail}
@@ -62,6 +64,7 @@ const Form = () => {
 
                 <div>
                     <label>Password:</label>
+                    <br></br>
                     <input type="password" 
                     value={password} 
                     onChange={handlePassword}
@@ -72,6 +75,7 @@ const Form = () => {
 
                 <div>
                     <label>Confirm Password:</label>
+                    <br></br>
                     <input type="password" 
                     value={confirmPassword} 
                     onChange={handleConfirmPassword}
@@ -80,7 +84,7 @@ const Form = () => {
                     {!confirmPasswordValid && <p style={{color: "red"}}>Passwords do not match</p>}
                 </div>
 
-                <button type="sumit">Sign Up</button>
+                <button type="sumit" >Sign Up</button>
 
             </form>
         </div>
